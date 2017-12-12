@@ -1,0 +1,11 @@
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\bin\Debug\carlworld.exe.config
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\bin\Debug\carlworld.exe
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\bin\Debug\carlworld.pdb
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\Carl World.csprojResolveAssemblyReference.cache
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\卡尔的世界.MainWindow.resources
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\carlworld.Properties.Resources.resources
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\carlworld.block.block.resources
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\Carl World.csproj.GenerateResource.Cache
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\Carl World.csproj.CoreCompileInputs.cache
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\carlworld.exe
+C:\Users\oboard\OneDrive\Visual Studio\卡尔的世界\卡尔的世界\obj\Debug\carlworld.pdb
