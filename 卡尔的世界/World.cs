@@ -9,10 +9,19 @@ namespace carlworld
 {
     class World
     {
+        //地图数组
         public int[,] blocks = new int[100, 100];
         int blockslengh = 100;
 
+        //人物位置
         public PointF person = new PointF(0, 0);
+        //脸的方向
+        public Boolean personface = false;
+
+        public Color skycolor = Color.FromArgb(20, 100, 255);
+        public float skycolorR = 0.1f;
+        public float skycolorG = 0.5f;
+        public float skycolorB = 1.0f;
 
         public void CreateMap()
         {
