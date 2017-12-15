@@ -1,4 +1,7 @@
-﻿namespace 卡尔的世界
+﻿using System;
+using System.Windows.Forms;
+
+namespace 卡尔的世界
 {
     partial class MainWindow
     {
@@ -52,15 +55,19 @@
             this.glc.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.glc.RenderContextType = SharpGL.RenderContextType.FBO;
             this.glc.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            this.glc.Size = new System.Drawing.Size(784, 561);
+            this.glc.Size = new System.Drawing.Size(1584, 761);
             this.glc.TabIndex = 0;
+            this.glc.Load += new System.EventHandler(this.glc_Load);
             this.glc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.glc_KeyDown);
+            this.glc.MouseLeave += new System.EventHandler(this.glc_MouseLeave);
+            this.glc.MouseMove += new System.Windows.Forms.MouseEventHandler(this.glc_MouseMove);
+            this.glc.MouseUp += new System.Windows.Forms.MouseEventHandler(this.glc_MouseUp);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1584, 761);
             this.Controls.Add(this.glc);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
