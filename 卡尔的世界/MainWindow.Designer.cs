@@ -53,7 +53,7 @@ namespace 卡尔的世界
             this.glc.Margin = new System.Windows.Forms.Padding(0);
             this.glc.Name = "glc";
             this.glc.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
-            this.glc.RenderContextType = SharpGL.RenderContextType.FBO;
+            this.glc.RenderContextType = SharpGL.RenderContextType.NativeWindow;
             this.glc.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
             this.glc.Size = new System.Drawing.Size(1584, 761);
             this.glc.TabIndex = 0;

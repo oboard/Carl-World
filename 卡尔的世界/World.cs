@@ -85,9 +85,7 @@ namespace carlworld
                     {
                         blocks[CreateW, CreateH] = 1;
                         if (CreateH == MountainY)
-                        {
                             blocks[CreateW, CreateH] = 2;
-                        }
                     }
                 }
 

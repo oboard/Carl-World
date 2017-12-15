@@ -155,13 +155,28 @@ namespace 卡尔的世界
             else
                 world.person.Y = toY;
 
-            if (world.blocks[(int)(world.person.X + xx), (int)toY] == 0)
-                toY++;
-
+            //掉落
+            if (world.personface)
+            {
+                if (world.blocks[(int)world.person.X, (int)toY] == 0)
+                {
+                    toY += 1f;
+                    toX = world.person.X;
+                }
+            }
+            else
+            {
+                if (world.blocks[(int)world.person.X - 1, (int)toY + 1] == 0)
+                {
+                    toY += 1f;
+                    toX = world.person.X;
+                }
+            }
+            /*
             if (world.blocks[(int)world.person.X, (int)toY] != 0 &&
                 world.blocks[(int)(world.person.X), (int)toY - 1]!= 0)
                 Jump();
-
+                */
             //在列表产生位置
             list.Clear();
             listn.Clear();
