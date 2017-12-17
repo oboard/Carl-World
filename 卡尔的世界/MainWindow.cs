@@ -118,12 +118,18 @@ namespace 卡尔的世界
                 case Keys.A:
                     //左←_←
                     world.personface = false;
-                    toX = world.person.X - 1f;
+                    if (world.blocks[(int)(toX - 0.4f), (int)world.person.Y - 1] == 0)
+                    {
+                        toX = world.person.X - 1f;
+                    }
                     break;
                 case Keys.D:
                     //右→_→
                     world.personface = true;
-                    toX = world.person.X + 1f;
+                    if (world.blocks[(int)toX + 1,(int)world.person.Y - 1] == 0)
+                    {
+                        toX = world.person.X + 1f;
+                    }
                     break;
                 case Keys.W:
                     //跳↑_↑
@@ -134,6 +140,13 @@ namespace 卡尔的世界
                     //还没做好嘛。。
                     break;
             }
+        }
+
+        private void Jump()
+        {
+            if (toY == world.person.Y)
+                //只有在地面才能跳
+                toY = world.person.Y - 8f;
         }
 
         private void glc_Load(object sender, EventArgs e)
@@ -158,7 +171,7 @@ namespace 卡尔的世界
             //掉落
             if (world.personface)
             {
-                if (world.blocks[(int)world.person.X, (int)toY] == 0)
+                if (world.blocks[(int)toX, (int)toY] == 0)
                 {
                     toY += 1f;
                     toX = world.person.X;
@@ -166,7 +179,7 @@ namespace 卡尔的世界
             }
             else
             {
-                if (world.blocks[(int)world.person.X - 1, (int)toY + 1] == 0)
+                if (world.blocks[(int)toX + 1, (int)toY] == 0)
                 {
                     toY += 1f;
                     toX = world.person.X;
@@ -235,16 +248,8 @@ namespace 卡尔的世界
         {
         }
 
-        private void Jump()
-        {
-            if (toY == world.person.Y)
-                //只有在地面才能跳
-                toY = world.person.Y - 4f;
-        }
-
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            havemouse = true;
         }
 
         void Draw()
@@ -252,12 +257,12 @@ namespace 卡尔的世界
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
 
-            gl.Color(1f, 1f, 1f, 1f);
+            gl.Scale(1.0f, 1.0f, 2.0f);
+            gl.Color(1.0f, 1.0f, 1.0f, 1.0f);
             gl.Enable(OpenGL.GL_TEXTURE_2D);
 
             for (int i = 0; i < list.Count; i++)
             {
-                //gl.Rotate(Rotation, 0.0f, 1.0f, 0.0f);
                 
                 textrued[listn[i]].Bind(gl);
                 gl.Begin(OpenGL.GL_QUADS);//绘制四边形

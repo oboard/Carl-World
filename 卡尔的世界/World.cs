@@ -90,7 +90,6 @@ namespace carlworld
                 }
 
 
-
                 //小人位置设定
                 person.X = blockslengh / 2;
                 person.Y = 1;
